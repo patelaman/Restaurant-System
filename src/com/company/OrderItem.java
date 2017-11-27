@@ -4,8 +4,8 @@ public class OrderItem {
 
     private int itemNumber;
 
-    public OrderItem(MenuItem m) {
-        this.itemNumber = m.getItemNumber();
+    public OrderItem(int itemNumber) {
+        this.itemNumber = itemNumber;
     }
 
     public int getItemNumber() {

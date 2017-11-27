@@ -8,6 +8,9 @@ public class Menu {
 
     public Menu() {
         this.menu = new ArrayList();
+        menu.add(new MenuItem(1,"Chicken", 12.00));
+        menu.add(new MenuItem(2,"Steak", 25.00));
+        menu.add(new MenuItem(3,"Salmon", 14.00));
     }
 
     public ArrayList<MenuItem> getMenu() {
