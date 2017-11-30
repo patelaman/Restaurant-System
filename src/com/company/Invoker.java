@@ -52,13 +52,13 @@ class SubmitOrder implements Command{
 
     @Override
     public OrderItem execute() {
-        OrderItem orderItem = new OrderItem(aggregator.getMenu().getMenuItem(itemNumber).getItemNumber());
+        OrderItem orderItem = new OrderItem(itemNumber);
         aggregator.getOrders().getOrderItems().add(orderItem);
         return orderItem;
     }
 }
 
-class DisplayTab implements Command{
+class DisplayTab implements Command {
 
     private Aggregator aggregator;
 

@@ -12,8 +12,4 @@ public class OrderItem {
         return itemNumber;
     }
 
-    public void setItemNumber(int itemNumber) {
-        this.itemNumber = itemNumber;
-    }
-
 }
