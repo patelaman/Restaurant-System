@@ -8,10 +8,6 @@ public class SystemInterface {
         invoker = new Invoker(new Aggregator());
     }
 
-    public Invoker getInvoker() {
-        return invoker;
-    }
-
     public String[] displayMenu() {
         String[] menu = new String[invoker.displayMenu().getMenu().size()];
         int count = 0;
@@ -30,5 +26,10 @@ public class SystemInterface {
 
     public String[] displayTab() {
         return invoker.displayTab().getTab();
+    }
+
+    public double displayTabTotal() {
+        return invoker.displayTabTotal().getTabTotal();
+
     }
 }

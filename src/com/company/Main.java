@@ -62,6 +62,7 @@ public class Main {
         for(String s: systemInterface.displayTab()) {
             System.out.println(s);
         }
+        System.out.println("Total: $" + systemInterface.displayTabTotal());
         System.out.println();
     }
 

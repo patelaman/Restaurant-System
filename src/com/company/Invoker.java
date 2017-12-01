@@ -23,6 +23,11 @@ public class Invoker {
         return displayTab.execute();
     }
 
+    public Tab displayTabTotal() {
+        DisplayTabTotal displayTabTotal = new DisplayTabTotal(aggregator);
+        return displayTabTotal.execute();
+    }
+
 
 }
 
@@ -63,6 +68,21 @@ class DisplayTab implements Command {
     private Aggregator aggregator;
 
     public DisplayTab(Aggregator aggregator) {
+        this.aggregator = aggregator;
+    }
+
+    @Override
+    public Tab execute() {
+        Tab tab = new Tab(aggregator.getOrders(), aggregator.getMenu());
+        return tab;
+    }
+}
+
+class DisplayTabTotal implements Command {
+
+    private Aggregator aggregator;
+
+    public DisplayTabTotal(Aggregator aggregator) {
         this.aggregator = aggregator;
     }
 

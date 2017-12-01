@@ -20,4 +20,12 @@ public class Tab {
         }
         return tab;
     }
+
+    public double getTabTotal() {
+        double total = 0;
+        for(OrderItem o: orders.getOrderItems()) {
+            total += menu.getMenuItem(o.getItemNumber()).getPrice();
+        }
+        return total;
+    }
 }
