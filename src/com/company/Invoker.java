@@ -13,6 +13,11 @@ public class Invoker {
         return displayMenu.execute();
     }
 
+    public CompleteMeals displayMeals() {
+        DisplayMeals displayMeals = new DisplayMeals(aggregator);
+        return displayMeals.execute();
+    }
+
     public OrderItem submitOrder(int itemNumber) {
         SubmitOrder submitOrder = new SubmitOrder(aggregator, itemNumber);
         return submitOrder.execute();
@@ -45,6 +50,20 @@ class DisplayMenu implements Command{
     }
 }
 
+class DisplayMeals implements Command{
+
+    private Aggregator aggregator;
+
+    public DisplayMeals(Aggregator aggregator) {
+        this.aggregator = aggregator;
+    }
+
+    @Override
+    public CompleteMeals execute() {
+        return aggregator.getCompleteMeals();
+    }
+}
+
 class SubmitOrder implements Command{
 
     private Aggregator aggregator;
@@ -73,7 +92,7 @@ class DisplayTab implements Command {
 
     @Override
     public Tab execute() {
-        Tab tab = new Tab(aggregator.getOrders(), aggregator.getMenu());
+        Tab tab = new Tab(aggregator.getOrders(), aggregator.getMenu(), aggregator.getCompleteMeals());
         return tab;
     }
 }
@@ -88,7 +107,7 @@ class DisplayTabTotal implements Command {
 
     @Override
     public Tab execute() {
-        Tab tab = new Tab(aggregator.getOrders(), aggregator.getMenu());
+        Tab tab = new Tab(aggregator.getOrders(), aggregator.getMenu(), aggregator.getCompleteMeals());
         return tab;
     }
 }

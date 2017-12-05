@@ -2,11 +2,15 @@ package com.company;
 
 public interface CompleteMeal {
 
-    public void setAppetizer(String appetizer);
+    public void setItemNumber(int itemNumber);
 
-    public void setEntree(String entree);
+    public int getItemNumber();
 
-    public void setDessert(String dessert);
+    public void setAppetizer(int appetizer);
+
+    public void setEntree(int entree);
+
+    public void setDessert(int dessert);
 
     public void setPrice(double price);
 }

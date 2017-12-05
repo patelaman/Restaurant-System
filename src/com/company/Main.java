@@ -6,23 +6,6 @@ public class Main {
 
     public static void main(String[] args) {
 
-//        //Testing Code
-//        SystemInterface systemInterface = new SystemInterface();
-//        systemInterface.setInvoker();
-//
-//        //Display Menu
-//        displayMenu(systemInterface);
-//
-//        systemInterface.submitOrder(2);
-//        systemInterface.submitOrder(1);
-//        systemInterface.submitOrder(3);
-//
-//        //Display Tab
-//        displayTab(systemInterface);
-
-
-
-
         //Client Code
         SystemInterface systemInterface = new SystemInterface();
         systemInterface.setInvoker();
@@ -40,6 +23,7 @@ public class Main {
                     break;
                 case 3:
                     displayTab(systemInterface);
+                    getSubTotal(systemInterface);
                     break;
             }
             System.out.println("What would you like to do?");
@@ -62,8 +46,13 @@ public class Main {
         for(String s: systemInterface.displayTab()) {
             System.out.println(s);
         }
-        System.out.println("Total: $" + systemInterface.displayTabTotal());
+
         System.out.println();
+    }
+
+    private static double getSubTotal(SystemInterface systemInterface) {
+        System.out.println("Subtotal: $" + systemInterface.displayTabTotal());
+        return systemInterface.displayTabTotal();
     }
 
     private static void displayMenu(SystemInterface systemInterface) {
@@ -71,17 +60,23 @@ public class Main {
         for(String s: systemInterface.displayMenu()) {
             System.out.println(s);
         }
+        System.out.println("\nMeals");
+        for(String s: systemInterface.displayMeals()) {
+            System.out.println(s);
+        }
+        System.out.println();
     }
 
     //Input Validation for Integer's
     public static int getInt(Scanner sc) {
         int num;
-
-        while (!sc.hasNextInt()) {
-            System.out.println("Not an integer, Try again");
-            sc.next();
-        }
-        num = sc.nextInt();
+        do {
+            while (!sc.hasNextInt()) {
+                System.out.println("Not an integer, Try again");
+                sc.next();
+            }
+            num = sc.nextInt();
+        }while(num < 0 || num > 11);
         return num;
     }
 }

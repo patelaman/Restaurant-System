@@ -18,6 +18,16 @@ public class SystemInterface {
         return menu;
     }
 
+    public String[] displayMeals() {
+        String[] meals = new String[invoker.displayMeals().getCompleteMeals().size()];
+        int count = 0;
+        for(CompleteMealBuilder completeMealBuilder: invoker.displayMeals().getCompleteMeals()) {
+            meals[count] = completeMealBuilder.toString();
+            count++;
+        }
+        return meals;
+    }
+
     public int[] submitOrder(int itemNumber) {
         invoker.submitOrder(itemNumber);
         int[] order = {itemNumber};

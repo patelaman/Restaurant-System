@@ -5,6 +5,7 @@ import java.util.ArrayList;
 public class Menu {
 
     private ArrayList<MenuItem> menu;
+    private ArrayList<CompleteMealBuilder> completeMeals;
 
     public Menu() {
         this.menu = new ArrayList();
@@ -30,5 +31,17 @@ public class Menu {
         }
 
         return null;
+    }
+
+    public void buildMeals() {
+        Builder builder;
+        for(CompleteMealBuilder completeMealBuilder: completeMeals) {
+            builder = new Builder(completeMealBuilder);
+            builder.buildMeal();
+        }
+    }
+
+    public ArrayList<CompleteMealBuilder> getCompleteMeals() {
+        return completeMeals;
     }
 }
