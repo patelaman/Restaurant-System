@@ -19,9 +19,9 @@ public class SystemInterface {
     }
 
     public String[] displayMeals() {
-        String[] meals = new String[invoker.displayMeals().getCompleteMeals().size()];
+        String[] meals = new String[invoker.displayMeals().getCompleteMealsMenu().size()];
         int count = 0;
-        for(CompleteMealBuilder completeMealBuilder: invoker.displayMeals().getCompleteMeals()) {
+        for(CompleteMealBuilder completeMealBuilder: invoker.displayMeals().getCompleteMealsMenu()) {
             meals[count] = completeMealBuilder.toString();
             count++;
         }
@@ -40,6 +40,9 @@ public class SystemInterface {
 
     public double displayTabTotal() {
         return invoker.displayTabTotal().getTabTotal();
+    }
 
+    public double displayDiscounts() {
+        return invoker.displayTabTotal().getDiscounts();
     }
 }

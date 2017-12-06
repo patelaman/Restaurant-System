@@ -12,6 +12,8 @@ public interface CompleteMealBuilder {
 
     public void buildPrice();
 
+    public void buildDiscount();
+
     public CompleteMeal getMeal();
 
     public String toString();

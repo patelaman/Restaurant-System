@@ -36,6 +36,11 @@ public class CompleteDinnerMeal_2 implements CompleteMealBuilder{
     }
 
     @Override
+    public void buildDiscount() {
+        completeDinner.setDiscount(6.00);
+    }
+
+    @Override
     public CompleteMeal getMeal() {
         return this.completeDinner;
     }

@@ -7,12 +7,14 @@ public class CompleteDinner implements CompleteMeal {
     private int entree;
     private int dessert;
     private double price;
+    private double discount;
 
     @Override
     public void setItemNumber(int itemNumber) {
         this.itemNumber = itemNumber;
     }
 
+    @Override
     public int getItemNumber() {
         return itemNumber;
     }
@@ -22,21 +24,30 @@ public class CompleteDinner implements CompleteMeal {
         this.appetizer = appetizer;
     }
 
-    public int getAppetizer() { return appetizer; }
+    @Override
+    public OrderItem getAppetizer() {
+        return new OrderItem(appetizer);
+    }
 
     @Override
     public void setEntree(int entree) {
         this.entree = entree;
     }
 
-    public int getEntree() { return entree; }
+    @Override
+    public OrderItem getEntree() {
+        return new OrderItem(entree);
+    }
 
     @Override
     public void setDessert(int dessert) {
         this.dessert = dessert;
     }
 
-    public int getDessert() { return dessert; }
+    @Override
+    public OrderItem getDessert() {
+        return new OrderItem(dessert);
+    }
 
     @Override
     public void setPrice(double price) {
@@ -44,4 +55,14 @@ public class CompleteDinner implements CompleteMeal {
     }
 
     public double getPrice() { return price; }
+
+    @Override
+    public void setDiscount(double discount) {
+        this.discount = discount;
+    }
+
+    @Override
+    public double getDiscount() {
+        return discount;
+    }
 }

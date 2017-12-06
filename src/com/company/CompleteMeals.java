@@ -4,12 +4,14 @@ import java.util.ArrayList;
 
 public class CompleteMeals {
 
+    private ArrayList<CompleteMealBuilder> completeMealsMenu;
     private ArrayList<CompleteMealBuilder> completeMeals;
 
     public CompleteMeals() {
         this.completeMeals = new ArrayList();
-        completeMeals.add(new CompleteDinnerMeal_1());
-        completeMeals.add(new CompleteDinnerMeal_2());
+        this.completeMealsMenu = new ArrayList();
+        completeMealsMenu.add(new CompleteDinnerMeal_1());
+        completeMealsMenu.add(new CompleteDinnerMeal_2());
     }
 
     public void buildMeals() {
@@ -22,5 +24,9 @@ public class CompleteMeals {
 
     public ArrayList<CompleteMealBuilder> getCompleteMeals() {
         return completeMeals;
+    }
+
+    public ArrayList<CompleteMealBuilder> getCompleteMealsMenu() {
+        return completeMealsMenu;
     }
 }

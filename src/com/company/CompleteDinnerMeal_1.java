@@ -4,7 +4,7 @@ public class CompleteDinnerMeal_1 implements CompleteMealBuilder{
 
     private CompleteDinner completeDinner;
     private Menu menu = new Menu();
-    private Orders orders = new Orders();
+
 
     public CompleteDinnerMeal_1() {
         this.completeDinner = new CompleteDinner();
@@ -33,6 +33,11 @@ public class CompleteDinnerMeal_1 implements CompleteMealBuilder{
     @Override
     public void buildPrice() {
         completeDinner.setPrice(20.00);
+    }
+
+    @Override
+    public void buildDiscount() {
+        completeDinner.setDiscount(3.50);
     }
 
     @Override

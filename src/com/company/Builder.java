@@ -18,5 +18,6 @@ public class Builder {
         completeMealBuilder.buildEntree();
         completeMealBuilder.buildDessert();
         completeMealBuilder.buildPrice();
+        completeMealBuilder.buildDiscount();
     }
 }

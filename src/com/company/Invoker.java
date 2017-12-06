@@ -32,9 +32,9 @@ public class Invoker {
         DisplayTabTotal displayTabTotal = new DisplayTabTotal(aggregator);
         return displayTabTotal.execute();
     }
-
-
 }
+
+
 
 class DisplayMenu implements Command{
 
@@ -64,23 +64,34 @@ class DisplayMeals implements Command{
     }
 }
 
-class SubmitOrder implements Command{
+class SubmitOrder implements Command {
 
     private Aggregator aggregator;
     private int itemNumber;
 
-    public SubmitOrder(Aggregator aggregator, int itemNumber){
+    public SubmitOrder(Aggregator aggregator, int itemNumber) {
         this.aggregator = aggregator;
         this.itemNumber = itemNumber;
     }
 
     @Override
     public OrderItem execute() {
-        OrderItem orderItem = new OrderItem(itemNumber);
-        aggregator.getOrders().getOrderItems().add(orderItem);
-        return orderItem;
+        if (itemNumber == 10) {
+            aggregator.getCompleteMeals().getCompleteMeals().add(new CompleteDinnerMeal_1());
+        }
+        else if (itemNumber == 11) {
+            aggregator.getCompleteMeals().getCompleteMeals().add(new CompleteDinnerMeal_2());
+        }
+        else {
+            OrderItem orderItem = new OrderItem(itemNumber);
+            aggregator.getOrders().getOrderItems().add(orderItem);
+            return orderItem;
+        }
+
+        return null;
     }
 }
+
 
 class DisplayTab implements Command {
 
