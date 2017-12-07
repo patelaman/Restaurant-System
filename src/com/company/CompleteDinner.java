@@ -56,6 +56,10 @@ public class CompleteDinner implements CompleteMeal {
 
     public double getPrice() { return price; }
 
+    public String getFormattedPrice() {
+        return String.format("$%.2f", price);
+    }
+
     @Override
     public void setDiscount(double discount) {
         this.discount = discount;

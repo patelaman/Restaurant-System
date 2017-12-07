@@ -47,9 +47,12 @@ public class CompleteDinnerMeal_1 implements CompleteMealBuilder{
 
     @Override
     public String toString(){
-        return "10 - Dinner Meal: \n\t" + menu.getMenuItem(1).toString() + "\n\t" +
-                menu.getMenuItem(4).toString() + "\n\t" + menu.getMenuItem(7).toString()
-                + "\n\tSale Price: \t" + "$20.00";
+        buildPrice();
+        return String.format("10 - Dinner Meal\n%s\n%s\n%s\nSale Price:%17s",
+                menu.getMenuItem(1),
+                menu.getMenuItem(4),
+                menu.getMenuItem(7),
+                completeDinner.getFormattedPrice());
     }
 
 }

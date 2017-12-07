@@ -57,8 +57,8 @@ public class Main {
     }
 
     private static double getTotal(SystemInterface systemInterface) {
-        System.out.println("Discounts: $" + systemInterface.displayDiscounts());
-        System.out.println("Subtotal: $" + systemInterface.displayTabTotal());
+        System.out.printf("Discounts: $%.2f%n", systemInterface.displayDiscounts());
+        System.out.printf("Subtotal: $%.2f", systemInterface.displayTabTotal());
         return systemInterface.displayTabTotal();
     }
 
@@ -72,7 +72,7 @@ public class Main {
                 sc.next();
             }
             num = sc.nextInt();
-        }while(num < 0 || num > 11);
+        } while(num < 0 || num > 11);
         return num;
     }
 }

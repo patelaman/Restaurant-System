@@ -33,12 +33,16 @@ public class MenuItem {
         return price;
     }
 
+    public String getFormattedPrice() {
+        return String.format("$%.2f", price);
+    }
+
     public void setPrice(double price) {
         this.price = price;
     }
 
     @Override
     public String toString() {
-        return itemNumber + "\t" + entree + "\t" + price;
+        return String.format("%-4s %14s %8s", itemNumber, entree, getFormattedPrice());
     }
 }
