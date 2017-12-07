@@ -1,4 +1,4 @@
-package com.company;
+package ObjectsAggregators;
 
 import java.util.ArrayList;
 

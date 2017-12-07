@@ -1,4 +1,4 @@
-package com.company;
+package Builder;
 
 public class Builder {
 
