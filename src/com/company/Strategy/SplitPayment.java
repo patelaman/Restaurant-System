@@ -1,6 +1,6 @@
-package Strategy;
+package com.company.Strategy;
 
-import Client.Main;
+import com.company.Main;
 
 import java.util.Scanner;
 

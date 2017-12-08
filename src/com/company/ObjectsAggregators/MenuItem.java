@@ -1,4 +1,4 @@
-package ObjectsAggregators;
+package com.company.ObjectsAggregators;
 
 
 public class MenuItem {

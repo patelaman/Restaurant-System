@@ -1,4 +1,4 @@
-package Strategy;
+package com.company.Strategy;
 
 public class PaymentContext {
 

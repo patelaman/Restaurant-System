@@ -1,8 +1,8 @@
-package Command;
+package com.company.Command;
 
-import ObjectsAggregators.Aggregator;
-import Builder.CompleteMealBuilder;
-import ObjectsAggregators.MenuItem;
+import com.company.ObjectsAggregators.Aggregator;
+import com.company.Builder.CompleteMealBuilder;
+import com.company.ObjectsAggregators.MenuItem;
 
 public class SystemInterface {
 

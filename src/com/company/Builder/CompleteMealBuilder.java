@@ -1,4 +1,4 @@
-package Builder;
+package com.company.Builder;
 
 public interface CompleteMealBuilder {
 

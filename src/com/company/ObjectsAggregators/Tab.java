@@ -1,7 +1,7 @@
-package ObjectsAggregators;
+package com.company.ObjectsAggregators;
 
-import Builder.CompleteMealBuilder;
-import Builder.CompleteMeals;
+import com.company.Builder.CompleteMealBuilder;
+import com.company.Builder.CompleteMeals;
 
 public class Tab {
 

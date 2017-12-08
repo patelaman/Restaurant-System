@@ -1,6 +1,6 @@
-package Builder;
+package com.company.Builder;
 
-import ObjectsAggregators.OrderItem;
+import com.company.ObjectsAggregators.OrderItem;
 
 public class CompleteDinner implements CompleteMeal {
 

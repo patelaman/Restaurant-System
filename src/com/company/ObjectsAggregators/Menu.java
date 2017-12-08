@@ -1,4 +1,4 @@
-package ObjectsAggregators;
+package com.company.ObjectsAggregators;
 
 import java.util.ArrayList;
 

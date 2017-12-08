@@ -1,10 +1,10 @@
-package Client;
+package com.company;
 
-import Command.SystemInterface;
-import Strategy.OnePayment;
-import Strategy.PaymentContext;
-import Strategy.SplitPayment;
-import Strategy.SplitPaymentEqually;
+import com.company.Command.SystemInterface;
+import com.company.Strategy.OnePayment;
+import com.company.Strategy.PaymentContext;
+import com.company.Strategy.SplitPayment;
+import com.company.Strategy.SplitPaymentEqually;
 
 import java.util.Scanner;
 

@@ -1,12 +1,12 @@
-package Command;
+package com.company.Command;
 
-import Builder.CompleteDinnerMeal_1;
-import Builder.CompleteDinnerMeal_2;
-import Builder.CompleteMeals;
-import ObjectsAggregators.Aggregator;
-import ObjectsAggregators.Menu;
-import ObjectsAggregators.OrderItem;
-import ObjectsAggregators.Tab;
+import com.company.Builder.CompleteDinnerMeal_1;
+import com.company.Builder.CompleteDinnerMeal_2;
+import com.company.Builder.CompleteMeals;
+import com.company.ObjectsAggregators.Aggregator;
+import com.company.ObjectsAggregators.Menu;
+import com.company.ObjectsAggregators.OrderItem;
+import com.company.ObjectsAggregators.Tab;
 
 public class Invoker {
 

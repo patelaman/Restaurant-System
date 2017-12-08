@@ -1,6 +1,6 @@
-package ObjectsAggregators;
+package com.company.ObjectsAggregators;
 
-import Builder.CompleteMeals;
+import com.company.Builder.CompleteMeals;
 
 public class Aggregator {
 
