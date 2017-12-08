@@ -12,10 +12,10 @@ public class Tab {
     private double discounts;
     private double total = 0;
 
-    public Tab(Orders orders, Menu menu, CompleteMeals completeMeals) {
-        this.orders = orders;
-        this.menu = menu;
-        this.completeMeals = completeMeals;
+    public Tab(Aggregator aggregator) {
+        this.orders = aggregator.getOrders();
+        this.menu = aggregator.getMenu();
+        this.completeMeals = aggregator.getCompleteMeals();
         tab = new String[orders.getOrderItems().size() + completeMeals.getCompleteMeals().size() * 3];
     }
 

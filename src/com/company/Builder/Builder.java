@@ -8,10 +8,6 @@ public class Builder {
         this.completeMealBuilder = mealBuilder;
     }
 
-
-    public CompleteMeal getCompleteMeal() { return this.completeMealBuilder.getMeal(); }
-
-
     public void buildMeal() {
         completeMealBuilder.buildItemNumber();
         completeMealBuilder.buildAppetizer();

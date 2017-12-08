@@ -4,27 +4,27 @@ import com.company.ObjectsAggregators.OrderItem;
 
 public interface CompleteMeal {
 
-    public void setItemNumber(int itemNumber);
+    void setItemNumber(int itemNumber);
 
-    public int getItemNumber();
+    int getItemNumber();
 
-    public void setAppetizer(int appetizer);
+    void setAppetizer(int appetizer);
 
-    public OrderItem getAppetizer();
+    OrderItem getAppetizer();
 
-    public void setEntree(int entree);
+    void setEntree(int entree);
 
-    public OrderItem getEntree();
+    OrderItem getEntree();
 
-    public void setDessert(int dessert);
+    void setDessert(int dessert);
 
-    public OrderItem getDessert();
+    OrderItem getDessert();
 
-    public void setPrice(double price);
+    void setPrice(double price);
 
-    public double getPrice();
+    double getPrice();
 
-    public void setDiscount(double discount);
+    void setDiscount(double discount);
 
-    public double getDiscount();
+    double getDiscount();
 }

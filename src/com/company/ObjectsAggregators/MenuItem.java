@@ -17,28 +17,12 @@ public class MenuItem {
         return itemNumber;
     }
 
-    public void setItemNumber(int itemNumber) {
-        this.itemNumber = itemNumber;
-    }
-
-    public String getEntree() {
-        return entree;
-    }
-
-    public void setEntree(String entree) {
-        this.entree = entree;
-    }
-
     public double getPrice() {
         return price;
     }
 
     public String getFormattedPrice() {
         return String.format("$%.2f", price);
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
     }
 
     @Override

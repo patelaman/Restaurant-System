@@ -111,7 +111,7 @@ class DisplayTab implements Command {
 
     @Override
     public Tab execute() {
-        Tab tab = new Tab(aggregator.getOrders(), aggregator.getMenu(), aggregator.getCompleteMeals());
+        Tab tab = new Tab(aggregator);
         return tab;
     }
 }
@@ -126,7 +126,7 @@ class DisplayTabTotal implements Command {
 
     @Override
     public Tab execute() {
-        Tab tab = new Tab(aggregator.getOrders(), aggregator.getMenu(), aggregator.getCompleteMeals());
+        Tab tab = new Tab(aggregator);
         return tab;
     }
 }

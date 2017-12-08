@@ -2,19 +2,19 @@ package com.company.Builder;
 
 public interface CompleteMealBuilder {
 
-    public void buildItemNumber();
+    void buildItemNumber();
 
-    public void buildAppetizer();
+    void buildAppetizer();
 
-    public void buildEntree();
+    void buildEntree();
 
-    public void buildDessert();
+    void buildDessert();
 
-    public void buildPrice();
+    void buildPrice();
 
-    public void buildDiscount();
+    void buildDiscount();
 
-    public CompleteMeal getMeal();
+    CompleteMeal getMeal();
 
-    public String toString();
+    String toString();
 }
